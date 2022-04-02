@@ -356,7 +356,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
     await conn.send2ButtonLoc(m.chat, await (await fetch(fla + teks)).buffer(), text.trim(), 'ᴍᴀᴅᴇ ᴡɪᴛʜ ❤️ *HIL3M*', 'botu kim kurdu?😯', `${_p}owner`, 'ɢɪᴛ', `${_p}git`, m)
   } catch (e) {
-    conn.reply(m.chat, 'Sorry,The bot is not responding', m)
+    conn.reply(m.chat, 'Üzgünüz, bot yanıt vermiyor.', m)
     throw e
   }
 }
