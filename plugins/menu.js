@@ -354,6 +354,13 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
       readmore: readMore
     }
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
+    await conn.send2ButtonLoc(m.chat, await (await fetch("https://raw.githubusercontent.com/DEVILSER/DEVILSER/main/Media/Ammu/reduced_IMG-20211219-WA0031_2.jpg")).buffer(), text.trim(), '© ᴡɪᴢᴀʀᴅ sᴇʀ ©', 'Owner Bot', ',owner', 'All Commands', '.? all', m)
+  } catch (e) {
+    conn.reply(m.chat, 'Üzgünüz, Tekrar Deneyin.', m)
+    throw e
+    
+    }
+    text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
     await conn.send2ButtonLoc(m.chat, await (await fetch(fla + teks)).buffer(), text.trim(), 'ᴍᴀᴅᴇ ᴡɪᴛʜ ❤️ *HIL3M*', 'botu kim kurdu?😯', `${_p}owner`, 'ɢɪᴛ', `${_p}git`, m)
   } catch (e) {
     conn.reply(m.chat, 'Üzgünüz, bot yanıt vermiyor.', m)
