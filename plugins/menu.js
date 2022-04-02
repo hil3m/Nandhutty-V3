@@ -6,17 +6,17 @@ let fetch = require('node-fetch')
 let moment = require('moment-timezone')
 const defaultMenu = {
   before: `
-  〔 ʜɪʟᴇᴍ ʙᴏᴛ 〕
+  〔 *_HIL3M BOT*_ 〕
 ➪Selam, %name!
 ➪*Süre*: *%uptime (%muptime)*
-➪*Geliştirici*: ᴍᴇʟɪʜ ᴏᴢᴅᴏɢʀᴜ
+➪*Geliştirici*: _Melih Özdoğru_
 %readmore`.trimStart(),
   header: '*[ %category ]*',
   body: '✰ %cmd %islimit %isPremium',
-  footer: '\n*[ ᴅᴀʜᴀ ᴄᴏᴋ ᴏᴢᴇʟʟɪᴋ ɪᴄɪɴ ʙᴇᴋʟᴇᴍᴇᴅᴇ ᴋᴀʟɪɴɪᴢ ]*\n',
+  footer: '\n*[ daha çok özellik için lütfen beklemede kalınız. ]*\n',
   after: `
-*ʙᴏᴛᴜ ᴋᴜʟʟᴀɴᴅıɢıɴıᴢ ɪᴄɪɴ ᴛᴇᴤᴇᴋᴋüʀʟᴇʀ🦄*
-*ᴜᴍᴀʀıᴍ ᴇɢʟᴇɴᴍɪꜱꜱɪɴᴅɪʀ.🦄*
+*botu kullandığınız için teşekkürler🦄*
+*umarım eğlenmişsinizdir.🦄*
 `,
 }
 let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
@@ -172,10 +172,10 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
     if (teks == '404') {
       return conn.relayWAMessage(conn.prepareMessageFromContent(m.chat, {
         "listMessage": {
-          "title": `      🔮 ɴᴀɴᴅʜᴜᴛᴛʏ ᴠ3 🔮\n\╭─❑\n\│✅ Version: v3 \n\│✅ Library: Baileys\n\│✅ Runtime: ${uptime} \n\╰❑\n\╭─⭐ 「 INFO USER 」\n\│ 👤 Name: ${name} \n\│ 🔍 Total Features : 100+\n\│ ⚠️ Limit: ${limit} \n\│ 🗓️ Date: ${date} \n\│ 🔰 Exp: ${exp} \n\│ 💎 Level: ${level} \n\│ 🔮 Role: ${role} \n\│ 📟 Storage: 106/128 Gb \n\╰⭐\n\╭─ ❑「 INFORMATION 」❑──\n\│ This bot is still in testing stage\n\│ if there is a bug \ error please\n\│ report it to the owner\n\│\n\╰❑`.trim(),
-          "description": "ᴅᴏɴᴛ sᴘᴀᴍ",
-          "buttonText": "Click Here",
-          "footerText": "ᴅᴇᴠᴇʟᴏᴘᴇᴅ ʙʏ ᴀᴊᴍᴀʟ-ᴀᴄʜᴜ",
+          "title": `      🔮 _*HIL3M*_ 🔮\n\╭─❑\n\│✅ Sürüm: v3 \n\│✅ Lib: HIL3M\n\│✅ Ç. Süresi: ${uptime} \n\╰❑\n\╭─⭐ 「 KULLANICI BILGISI 」\n\│ 👤 İsim: ${name} \n\│ 🔍 Plugin Sayısı : 100+\n\│ ⚠️ Sınır: ${limit} \n\│ 🗓️ Tarih: ${date} \n\│ 🔰 XP: ${exp} \n\│ 💎 Seviye: ${level} \n\│ 🔮 Rol: ${role}\n\╰⭐\n\╭─ ❑「 UYARI 」❑──\n\│ Bot HIL3M tarafından geliştirilme aşamasındadır.\n\│ Bir sorunla karşılaşırsanız \ Lütfen\n\│ +905443787048 e rapor edin.\n\│\n\╰❑`.trim(),
+          "description": "ig:melihozdogru",
+          "buttonText": "Buraya Tıklayınız",
+          "footerText": "HIL3M Tarafından Geliştirildi.",
           "listType": "SINGLE_SELECT",
           "sections": [
             {
