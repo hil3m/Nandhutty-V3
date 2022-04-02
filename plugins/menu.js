@@ -6,17 +6,17 @@ let fetch = require('node-fetch')
 let moment = require('moment-timezone')
 const defaultMenu = {
   before: `
-  〔 ɴᴀɴᴅʜᴜᴛᴛʏ ᴠ3 〕
-➪Hai, %name!
-➪Uptime: *%uptime (%muptime)*
-➪Developer:ᴀᴊᴍᴀʟ ᴀɴᴅ ᴀᴄʜᴜ
+  〔 ʜɪʟᴇᴍ ʙᴏᴛ 〕
+➪Selam, %name!
+➪*Süre*: *%uptime (%muptime)*
+➪*Geliştirici*: ᴍᴇʟɪʜ ᴏᴢᴅᴏɢʀᴜ
 %readmore`.trimStart(),
   header: '*[ %category ]*',
   body: '✰ %cmd %islimit %isPremium',
-  footer: '\n*[ ᴍᴏʀᴇ ғᴇᴀᴛᴜʀᴇs ᴄᴏᴍᴍɪɴɢ sᴏᴏɴ ]*\n',
+  footer: '\n*[ ᴅᴀʜᴀ ᴄᴏᴋ ᴏᴢᴇʟʟɪᴋ ɪᴄɪɴ ʙᴇᴋʟᴇᴍᴇᴅᴇ ᴋᴀʟɪɴɪᴢ ]*\n',
   after: `
-*ᴛʜᴀɴᴋ ʏᴏᴜ ғᴏʀ ᴜsɪɴɢ ᴛʜᴇ ʙᴏᴛ🦄*
-*ʜᴏᴘᴇ ʏᴏᴜ ᴀʀᴇ ᴇɴᴊᴏʏɪɴɢ🦄*
+*ʙᴏᴛᴜ ᴋᴜʟʟᴀɴᴅıɢıɴıᴢ ɪᴄɪɴ ᴛᴇᴤᴇᴋᴋüʀʟᴇʀ🦄*
+*ᴜᴍᴀʀıᴍ ᴇɢʟᴇɴᴍɪꜱꜱɪɴᴅɪʀ.🦄*
 `,
 }
 let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
@@ -25,38 +25,38 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
   let arrayMenu = ['all', 'game', 'xp', 'stiker', 'shellajaib', 'quotes', 'admin', 'grup', 'premium', 'internet', 'anonymous', 'nulis', 'downloader', 'tools', 'fun', 'database', 'textpro', 'audio', 'jadibot', 'info', 'tanpakategori', 'owner']
   if (!arrayMenu.includes(teks)) teks = '404'
   if (teks == 'all') tags = {
-    'main': 'Main',
-    'game': 'Game',
-    'xp': 'Exp & Limit',
-    'sticker': 'Stiker',
-    'shell': 'shell Ajaib',
+    'main': 'Ana',
+    'game': 'Oyun',
+    'xp': 'XP & Sınır',
+    'sticker': 'Sticker',
+    'shell': 'x',
     'quotes': 'Quotes',
-    'admin': `Admin ${global.opts['restrict'] ? '' : '(Dinonaktifkan)'}`,
+    'admin': `Admin ${global.opts['restrict'] ? '' : '(HIL3M)'}`,
     'group': 'Grup',
     'premium': 'Premium',
-    'internet': 'Internet',
-    'anonymous': 'Anonymous Chat',
-    'nulis': 'MagerNulis & Logo',
-    'downloader': 'Downloader',
-    'tools': 'Tools',
-    'fun': 'Fun',
-    'database': 'Database',
-    'vote': 'Voting',
+    'internet': 'Internet Yöneticisi',
+    'anonymous': 'Anonim Chat',
+    'nulis': 'Logo',
+    'downloader': 'İndirme Yöneticisi',
+    'tools': 'Araçlar',
+    'fun': 'Eğlence',
+    'database': 'Veritabanı',
+    'vote': 'Oylama',
     'absen': 'Absen',
     'textpro': 'Textpro',
-    'audio': 'Pengubah Suara',
+    'audio': 'Ses Yöneticisi',
     'jadibot': 'Jadi Bot',
     'info': 'Info',
     '': 'Tanpa Kategori',
   }
   if (teks == 'game') tags = {
-    'game': 'Game'
+    'game': 'Oyun'
   }
   if (teks == 'xp') tags = {
-    'xp': 'Exp & Limit'
+    'xp': 'XP & Sınır'
   }
   if (teks == 'stiker') tags = {
-    'sticker': 'Stiker'
+    'sticker': 'Sticker'
   }
   if (teks == 'shellajaib') tags = {
     'shell': 'shell Ajaib'
@@ -98,11 +98,8 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
     'vote': 'Voting',
     'absen': 'Absen'
   }
-  if (teks == 'quran') tags = {
-    'quran': 'Al Qur\'an'
-  }
   if (teks == 'audio') tags = {
-    'audio': 'Pengubah Suara'
+    'audio': 'Ses Yöneticisi'
   }
   if (teks == 'jadibot') tags = {
     'jadibot': 'Jadi Bot'
@@ -111,7 +108,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
     'info': 'Info'
   }
   if (teks == 'tanpakategori') tags = {
-    '': 'Tanpa Kategori'
+    '': 'Kategori'
   }
   if (teks == 'owner') tags = {
     'owner': 'Owner',
@@ -184,97 +181,89 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
             {
               "rows": [
                 {
-                  "title": `𝐀𝐥𝐥 𝐂𝐨𝐦𝐦𝐚𝐧𝐝𝐬`,
+                  "title": `Tüm Komutlar`,
                   "description": "",
                   "rowId": `${_p}? all`
                 }, {
-                  "title": "𝐆𝐚𝐦𝐞 𝐂𝐨𝐦𝐦𝐚𝐧𝐝𝐬",
+                  "title": "Oyun Komutları",
                   "description": "",
                   "rowId": `${_p}? game`
 
                 }, {
-                  "title": "𝐗𝐏",
+                  "title": "XP",
                   "description": "",
                   "rowId": `${_p}? xp`
 
                 }, {
-                  "title": "𝐒𝐭𝐢𝐜𝐤𝐞𝐫",
+                  "title": "Sticker",
                   "description": "",
                   "rowId": `${_p}? stiker`
                 }, {
-                  "title": "𝐌𝐚𝐠𝐢𝐜 𝐒𝐡𝐞𝐥𝐥",
-                  "description": "",
-                  "rowId": `${_p}? shellajaib`
-                }, {
-                  "title": "𝐐𝐨𝐮𝐭𝐞𝐬",
+                  "title": "Quotes",
                   "description": "",
                   "rowId": `${_p}? quotes`
                 }, {
-                  "title": "𝐀𝐝𝐦𝐢𝐧",
+                  "title": "Admin",
                   "description": "",
                   "rowId": `${_p}? admin`
                 }, {
-                  "title": "𝐆𝐫𝐨𝐮𝐩",
+                  "title": "Grup",
                   "description": "",
                   "rowId": `${_p}? grup`
                 }, {
-                  "title": "𝐏𝐫𝐞𝐦𝐢𝐧𝐮𝐦",
+                  "title": "Preimum",
                   "description": "",
                   "rowId": `${_p}? premium`
                 }, {
-                  "title": "𝐈𝐧𝐭𝐞𝐫𝐧𝐞𝐭",
+                  "title": "İnternet Yöneticisi",
                   "description": "",
                   "rowId": `${_p}? internet`
                 }, {
-                  "title": "𝐀𝐧𝐨𝐧𝐲𝐦𝐨𝐮𝐬",
+                  "title": "Anonim Chat",
                   "description": "",
                   "rowId": `${_p}? anonymous`
                 }, {
-                  "title": "𝐍𝐮𝐥𝐢𝐬 𝐀𝐍𝐝 𝐋𝐨𝐠𝐨",
+                  "title": "Logo",
                   "description": "",
                   "rowId": `${_p}? nulis`
                 }, {
-                  "title": "𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐞𝐫",
+                  "title": "İndirme Yöneticisi",
                   "description": "",
                   "rowId": `${_p}? downloader`
                 }, {
-                  "title": "𝐓𝐨𝐨𝐥𝐬",
+                  "title": "Araçlar",
                   "description": "",
                   "rowId": `${_p}? tools`
                 }, {
-                  "title": "𝐅𝐮𝐧",
+                  "title": "Eğlence",
                   "description": "",
                   "rowId": `${_p}? fun`
                 }, {
-                  "title": "𝐃𝐚𝐭𝐚𝐛𝐚𝐬𝐞",
+                  "title": "Veritabanı",
                   "description": "",
                   "rowId": `${_p}? database`
                 }, {
-                  "title": "𝐕𝐨𝐭𝐞 𝐀𝐍𝐝 𝐀𝐛𝐬𝐞𝐧",
+                  "title": "Oylama",
                   "description": "",
                   "rowId": `${_p}? vote`
                 }, {
-                  "title": "𝐋𝐨𝐠𝐨 𝐌𝐚𝐤𝐞𝐫",
+                  "title": "Logo Tasarla",
                   "description": "",
                   "rowId": `${_p}? textpro`
                 }, {
-                  "title": "𝐀𝐮𝐝𝐢𝐨 𝐂𝐨𝐦𝐦𝐚𝐧𝐝𝐬",
+                  "title": "Ses Komutları",
                   "description": "",
                   "rowId": `${_p}? audio`
                 }, {
-                  "title": "𝐉𝐚𝐝𝐢 𝐁𝐨𝐭",
-                  "description": "",
-                  "rowId": `${_p}? jadibot`
-                }, {
-                  "title": "𝐈𝐧𝐟𝐨",
+                  "title": "Bilgi",
                   "description": "",
                   "rowId": `${_p}? info`
                 }, {
-                  "title": "𝐓𝐚𝐧𝐩𝐚 𝐂𝐚𝐭𝐞𝐠𝐨𝐫𝐲",
+                  "title": "Kategori",
                   "description": "",
                   "rowId": `${_p}? tanpakategori`
                 }, {
-                  "title": "𝐎𝐰𝐧𝐞𝐫",
+                  "title": "Sahip",
                   "description": "",
                   "rowId": `${_p}? owner`
                 }
@@ -401,16 +390,16 @@ function ucapan() {
   const time = moment.tz('Asia/Kolkata').format('HH')
   res = "Good Morning 🌄"
   if (time >= 4) {
-    res = "Good Morning 🌞"
+    res = "Günaydın 🌞"
   }
   if (time > 10) {
-    res = "Good afternoon 🌅"
+    res = "İyi Öğlenler 🌅"
   }
   if (time >= 15) {
-    res = "Good Evening 🌆"
+    res = "İyi Akşamlar 🌆"
   }
   if (time >= 18) {
-    res = "Good Night 🌌"
+    res = "İyi Geceler 🌌"
   }
   return res
 }
