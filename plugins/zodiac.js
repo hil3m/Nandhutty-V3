@@ -30,19 +30,19 @@ handler.command = /^zodia[kc]$/i
 module.exports = handler
 
 const zodiak = [
-    ["Capricorn", new Date(1970, 0, 1)],
-    ["Aquarius", new Date(1970, 0, 20)],
-    ["Pisces", new Date(1970, 1, 19)],
-    ["Aries", new Date(1970, 2, 21)],
-    ["Taurus", new Date(1970, 3, 21)],
-    ["Gemini", new Date(1970, 4, 21)],
+    ["Oğlak", new Date(1970, 0, 1)],
+    ["Kova", new Date(1970, 0, 20)],
+    ["Balık", new Date(1970, 1, 19)],
+    ["Koç", new Date(1970, 2, 21)],
+    ["Boğa", new Date(1970, 3, 21)],
+    ["İkizler", new Date(1970, 4, 21)],
     ["Cancer", new Date(1970, 5, 22)],
-    ["Leo", new Date(1970, 6, 23)],
-    ["Virgo", new Date(1970, 7, 23)],
-    ["Libra", new Date(1970, 8, 23)],
-    ["Scorpio", new Date(1970, 9, 23)],
-    ["Sagittarius", new Date(1970, 10, 22)],
-    ["Capricorn", new Date(1970, 11, 22)]
+    ["Aslan", new Date(1970, 6, 23)],
+    ["Başak", new Date(1970, 7, 23)],
+    ["Terazi", new Date(1970, 8, 23)],
+    ["Akrep", new Date(1970, 9, 23)],
+    ["Yay", new Date(1970, 10, 22)],
+    ["Oğlak", new Date(1970, 11, 22)]
 ].reverse()
 
 function getZodiac(month, day) {
