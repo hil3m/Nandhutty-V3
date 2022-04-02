@@ -11,14 +11,12 @@ handler.before = function (m, { isOwner, isBotAdmin }) {
 
     if (!chat.antiBadword && !chat.isBanned && isBadword) {
         user.warning += 1
-        this.send2Button(m.chat, `*Badword terdeteksi!*
+        this.send2Button(m.chat, `*Kötü kelimeler tespit edildi!*
 Warning: ${user.warning} / 5
-Jika warning mencapai 5 kamu akan dibanned
+Uyarı 5'e ulaşırsa banlanırsınız.
 
-Type *#on antibadword* untuk menyalakan antibadword
-Type *#astagfirullah* atau *#maaf* untuk mengurangi warning
-
-“Barang siapa yang beriman kepada Allah dan Hari Akhir maka hendaklah dia berkata baik atau diam” (HR. al-Bukhari dan Muslim).`, 'ɴᴀɴᴅʜᴜᴛᴛʏ ᴠ3', 'Nyalakan Antibadword', ',1 antibadword', 'Astaghfirullah', ',maaf', m)
+Antibadword'ü açmak için *#on antibadword* yazın
+Uyarıyı azaltmak için *#sorry* yazın.`,'HIL3M ᴠ3', 'Antibadword', ',1 antibadword', 'sorry', ',maaf', m)
         if (user.warning >= 5) {
             user.banned = true
             if (m.isGroup) {
