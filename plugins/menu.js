@@ -354,7 +354,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
       readmore: readMore
     }
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
-    await conn.send2ButtonLoc(m.chat, await (await fetch(fla + teks)).buffer(), text.trim(), 'ᴍᴀᴅᴇ ᴡɪᴛʜ ❤️ ʙʏ ᴀᴊᴍᴀʟ', 'ᴡʜᴏ ɪs ᴛʜᴇ ᴏᴡɴᴇʀ😯', `${_p}owner`, 'ɢɪᴛ', `${_p}git`, m)
+    await conn.send2ButtonLoc(m.chat, await (await fetch(fla + teks)).buffer(), text.trim(), 'ᴍᴀᴅᴇ ᴡɪᴛʜ ❤️ *HIL3M*', 'botu kim kurdu?😯', `${_p}owner`, 'ɢɪᴛ', `${_p}git`, m)
   } catch (e) {
     conn.reply(m.chat, 'Sorry,The bot is not responding', m)
     throw e
@@ -387,7 +387,7 @@ function clockString(ms) {
   return [h, m, s].map(v => v.toString().padStart(2, 0)).join(':')
 }
 function ucapan() {
-  const time = moment.tz('Asia/Kolkata').format('HH')
+  const time = moment.tz('Asia/Moscow').format('HH')
   res = "Good Morning 🌄"
   if (time >= 4) {
     res = "Günaydın 🌞"
